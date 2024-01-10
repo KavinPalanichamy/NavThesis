@@ -4,10 +4,10 @@ from pyrtcm import RTCMReader
 
 # Caster server information
 caster_ip = "91.198.76.2"
-caster_port = 8083
+caster_port = 8082
 
 # RTN_MAC_3_1 stream identifier
-stream_identifier = "ZAMO_RTCM_3_1"
+stream_identifier = "WAT1_RTCM_3_1"
 
 # Caster server credentials
 username = "Kavin"

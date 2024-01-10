@@ -33,3 +33,5 @@ udevadm info -n /dev/ttyUSB0
 
 picocom -b 115200 /dev/ttyUSB0 
 Ctrl-A Ctrl-X to exit
+
+ scp NTRIP.py root@10.42.0.33:/home/root

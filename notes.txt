@@ -1,0 +1,35 @@
+Ventana:
+
+$ nmap -sP 10.42.0.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2024-01-10 09:45 CET
+Nmap scan report for 2388 (10.42.0.1)
+Host is up (0.00018s latency).
+Nmap scan report for 10.42.0.33
+Host is up (0.00048s latency).
+Nmap done: 256 IP addresses (2 hosts up) scanned in 2.52 seconds
+
+
+user@2388:~$ ssh root@10.42.0.33
+
+
+root
+root!1
+
+root@Gryf2-844066-844066:~# source p/bin/activate
+
+
+(p) root@Gryf2-844066-844066:~# pip install -U pip
+
+
+date -s "2024-01-10 09:49:50"
+hwclock --systohc
+
+
+# lsusb 
+Bus 001 Device 003: ID 067b:23a3 Prolific Technology, Inc. 
+
+udevadm info -a -n /dev/ttyUSB0
+udevadm info -n /dev/ttyUSB0
+
+picocom -b 115200 /dev/ttyUSB0 
+Ctrl-A Ctrl-X to exit

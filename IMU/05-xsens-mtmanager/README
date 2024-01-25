@@ -1,0 +1,18 @@
+1. Docker preparing
+	* go to folder 05-xsens-mtmanager
+	* $ ./build.sh
+	* edit script run.sh -> enter mti name in device (/dev/ttyUSB0, /dev/ttyUSB1, etc)
+	* $ ./run.sh
+	* docker disconnection: ctrl + d
+
+2. configuring mti (in docker)
+	* $ mtmanager
+	* on settings icon can be changed data structure sended via usb (acceleration, angle, etc and frequency of sending them)
+	
+3. run imu-data-transmitter
+	* $ qtcreator
+	* open project imu-data-transmitter
+	* in projects->run enter commandline options  -m mti30 -n /dev/ttyUSB0 -aq -p 5500 -s 127.0.0.1   (remember to set proper device name /dev/tty*)
+	* compile and run
+	* on your local machine: $ nc -ulp 5500
+	* in result you should see receiving data in json structure - data is send by udp if you want to take them with any c++ code
